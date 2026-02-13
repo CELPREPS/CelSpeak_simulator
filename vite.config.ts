@@ -3,11 +3,11 @@ import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
-    // Load env file based on `mode` in the current working directory.
+    // Load environment variables (like GEMINI_API_KEY)
     const env = loadEnv(mode, process.cwd(), '');
 
     return {
-      // This is critical for GitHub Pages deployment
+      // CRITICAL: Set this to your organization repo path
       base: '/CelSpeak_simulator/', 
       server: {
         port: 3000,
